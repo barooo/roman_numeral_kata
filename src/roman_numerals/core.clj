@@ -19,8 +19,8 @@
      ["IV" 4]
      ["I" 1]])
 
-  (if (= 0 n)
+  (if (zero? n)
     ""
-    (let [[roman arabic] (find-first #(<= (get % 1) n) num-table)]
-      (apply str (flatten (conj [roman] (to-roman (- n arabic))))))))
+    (let [[roman arabic] (find-first #(<= (% 1) n) num-table)]
+      (apply str (conj [roman] (to-roman (- n arabic)))))))
 
