@@ -3,8 +3,8 @@
 (defn find-first [pred coll]
   (first (filter pred coll)))
 
-(defn to_roman [n]
-  (def num_table
+(defn to-roman [n]
+  (def num-table
     [["M" 1000]
      ["CM" 900]
      ["D" 500]
@@ -21,6 +21,6 @@
 
   (if (= 0 n)
     ""
-    (let [[roman arabic] (find-first #(<= (get % 1) n) num_table)]
-      (apply str (flatten (conj [roman] (to_roman (- n arabic))))))))
+    (let [[roman arabic] (find-first #(<= (get % 1) n) num-table)]
+      (apply str (flatten (conj [roman] (to-roman (- n arabic))))))))
 
