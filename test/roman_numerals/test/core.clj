@@ -1,0 +1,22 @@
+(ns roman_numerals.test.core
+  (:use [roman_numerals.core])
+  (:use [clojure.test]))
+
+(deftest test_to_roman
+         (is (= "I" (to_roman 1)))
+         (is (= "II" (to_roman 2)))
+         (is (= "III" (to_roman 3)))
+         (is (= "V" (to_roman 5)))
+         (is (= "X" (to_roman 10)))
+         (is (= "XX" (to_roman 20)))
+         (is (= "L" (to_roman 50)))
+         (is (= "C" (to_roman 100)))
+         (is (= "D" (to_roman 500)))
+         (is (= "M" (to_roman 1000)))
+         (is (= "IV" (to_roman 4)))
+         (is (= "IX" (to_roman 9)))
+         (is (= "XL" (to_roman 40)))
+         (is (= "XC" (to_roman 90)))
+         (is (= "CD" (to_roman 400)))
+         (is (= "CM" (to_roman 900)))
+         (is (= "MCMLXXXIV" (to_roman 1984))))
