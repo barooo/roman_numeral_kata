@@ -2,7 +2,7 @@
   (:use [roman_numerals.core])
   (:use [clojure.test]))
 
-(deftest test_to-roman
+(deftest test-to-roman
          (is (= "I" (to-roman 1)))
          (is (= "II" (to-roman 2)))
          (is (= "III" (to-roman 3)))
@@ -19,4 +19,7 @@
          (is (= "XC" (to-roman 90)))
          (is (= "CD" (to-roman 400)))
          (is (= "CM" (to-roman 900)))
-         (is (= "MCMLXXXIV" (to-roman 1984))))
+         (is (= "LXXXIX" (to-roman 89)))
+         (is (= "MCMLXXXIV" (to-roman 1984)))
+         (is (= "MMMCMXCIX" (to-roman 3999))))
+
